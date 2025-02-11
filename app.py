@@ -93,7 +93,8 @@ def render_content(tab):
         ])
 
 # รันแอป
-if __name__ == '__main__':
-    app.run_server(debug=True, port=8055)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8001))  # ใช้ค่าจากตัวแปรสภาพแวดล้อม PORT
+    app.run(host="0.0.0.0", port=port)
 
 
